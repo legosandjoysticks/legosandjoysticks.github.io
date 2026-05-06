@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lance Grimsley Resume</title>
+    <style>
+      :root {
+        --ink: #17212b;
+        --muted: #52606d;
+        --rule: #d8dee6;
+        --accent: #1f6f5b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #f4f1eb;
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 13.5px;
+        line-height: 1.42;
+      }
+
+      main {
+        width: min(8.5in, calc(100% - 32px));
+        min-height: 11in;
+        margin: 24px auto;
+        padding: 0.55in 0.62in;
+        background: #fff;
+        box-shadow: 0 18px 48px rgb(23 33 43 / 14%);
+      }
+
+      header {
+        padding-bottom: 16px;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 5px;
+        font-size: 30px;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 9px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 12.5px;
+      }
+
+      .contact a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      section {
+        padding-top: 15px;
+      }
+
+      h2 {
+        margin-bottom: 8px;
+        border-bottom: 1px solid var(--rule);
+        color: var(--accent);
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        line-height: 1.6;
+        text-transform: uppercase;
+      }
+
+      h3 {
+        margin-bottom: 3px;
+        font-size: 16px;
+        line-height: 1.25;
+      }
+
+      .role {
+        margin-bottom: 8px;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .summary {
+        margin-bottom: 0;
+      }
+
+      .skills {
+        display: grid;
+        gap: 4px;
+        margin: 0;
+      }
+
+      .skills p {
+        margin-bottom: 0;
+      }
+
+      .item {
+        margin-bottom: 13px;
+      }
+
+      .item:last-child {
+        margin-bottom: 0;
+      }
+
+      .meta {
+        margin-bottom: 6px;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      a {
+        color: #175f91;
+        text-decoration: none;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      li {
+        margin-bottom: 4px;
+      }
+
+      .education-grid {
+        display: grid;
+        gap: 7px;
+      }
+
+      .education-entry {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 14px;
+      }
+
+      .education-entry p {
+        margin-bottom: 0;
+      }
+
+      .education-entry strong {
+        display: block;
+      }
+
+      @media print {
+        @page {
+          size: letter;
+          margin: 0.45in;
+        }
+
+        body {
+          background: #fff;
+          font-size: 12.25px;
+        }
+
+        main {
+          width: 100%;
+          min-height: auto;
+          margin: 0;
+          padding: 0;
+          box-shadow: none;
+        }
+
+        section {
+          padding-top: 11px;
+        }
+
+        h1 {
+          font-size: 27px;
+        }
+
+        h2 {
+          margin-bottom: 6px;
+        }
+
+        h3 {
+          font-size: 14px;
+        }
+
+        li {
+          margin-bottom: 3px;
+        }
+
+        .item {
+          break-inside: avoid;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Lance Grimsley</h1>
+        <p class="contact">
+          <span>Stow, OH</span>
+          <span>|</span>
+          <a href="mailto:Lance.Grimsley@protonmail.com">Lance.Grimsley@protonmail.com</a>
+          <span>|</span>
+          <a href="https://www.linkedin.com/in/lance-grimsley-a80323408/">LinkedIn</a>
+          <span>|</span>
+          <a href="https://github.com/legosandjoysticks">GitHub</a>
+          <span>|</span>
+          <a href="https://legosandjoysticks.github.io/">Portfolio</a>
+        </p>
+      </header>
+
+      <section>
+        <h2>Software / Product Engineer</h2>
+        <p class="summary">
+          Software / product engineer in transition with a background in education, systems design, and
+          user-centered problem solving. Builds full-stack tools that turn messy real-world data and workflows
+          into clear, usable products.
+        </p>
+      </section>
+
+      <section>
+        <h2>Technical Skills</h2>
+        <div class="skills">
+          <p><strong>Languages:</strong> JavaScript, Python, SQL, HTML, CSS</p>
+          <p><strong>Frontend:</strong> React, Vite, responsive UI, component-based design</p>
+          <p><strong>Backend:</strong> FastAPI, REST APIs, SQLite, data modeling</p>
+          <p><strong>Tools:</strong> Git, GitHub, Cloudflare Tunnel, PM2, command line, API testing with curl</p>
+          <p><strong>Product:</strong> user workflows, product framing, documentation, debugging, portfolio case studies</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <div class="item">
+          <h3>Deal Meal Planner</h3>
+          <p class="meta">
+            Full-stack grocery deal intelligence platform |
+            <a href="https://github.com/legosandjoysticks/deal-meal-planner-case-study">Case Study</a>
+          </p>
+          <ul>
+            <li>Built Deal Meal Planner, a full-stack grocery deal intelligence platform using FastAPI, SQLite, and React.</li>
+            <li>Designed API-driven workflows for ingesting, normalizing, searching, and ranking weekly grocery flyer deals.</li>
+            <li>Modeled messy retail flyer data with SQLite views to separate price-comparable deals from BOGO and promotional rows.</li>
+            <li>Implemented product features including smart deal ranking, item search, meal-planning support, and shopping-list workflows.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <div class="item">
+          <h3>Media / Language Arts Teacher</h3>
+          <p class="meta">Barberton City Schools | Barberton, OH | August 2007 - Present</p>
+          <ul>
+            <li>Designed classroom systems that translated complex learning goals into structured workflows, routines, and feedback loops.</li>
+            <li>Communicated technical and procedural information clearly to diverse learners, families, and colleagues.</li>
+            <li>Used iteration, observation, and user feedback to improve systems under real-world constraints.</li>
+            <li>Managed competing priorities, deadlines, and stakeholder needs in a high-communication environment.</li>
+            <li>Explored practical uses of AI and software tools to support learning, planning, and classroom workflows.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="education-grid">
+          <div class="education-entry">
+            <p><strong>Master's in Principalship</strong>University of Akron</p>
+            <p>2012</p>
+          </div>
+          <div class="education-entry">
+            <p><strong>Master's in Language Arts with Licensure</strong>University of Akron</p>
+            <p>2006</p>
+          </div>
+          <div class="education-entry">
+            <p><strong>Bachelor's Degree in Marketing</strong>Kent State University</p>
+            <p>2000</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Certifications / Continuing Learning</h2>
+        <ul>
+          <li>Teaching License</li>
+          <li>Independent study in full-stack development, AI-assisted engineering workflows, API design, and product-oriented software systems</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
