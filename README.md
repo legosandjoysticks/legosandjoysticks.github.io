@@ -1,5 +1,9 @@
 # Lance Grimsley Portfolio
 
-Public GitHub Pages portfolio site.
+This repository contains the built public GitHub Pages output for Lance Grimsley's portfolio.
 
-This repository intentionally contains only public-safe portfolio assets. Private application resumes, source repositories, operational files, credentials, and phone-number resume variants are excluded.
+Source workspace is kept private. Public links:
+
+- Portfolio: https://legosandjoysticks.github.io/
+- GitHub profile: https://github.com/legosandjoysticks
+- Deal Meal Planner case study: https://github.com/legosandjoysticks/deal-meal-planner-case-study

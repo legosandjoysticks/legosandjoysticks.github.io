@@ -4,85 +4,25 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lance Grimsley — Software / Product Engineer Portfolio</title>
+<meta
+  name="description"
+  content="Portfolio for Lance Grimsley, a software/product engineer building practical full-stack tools for messy real-world systems."
+/>
+<meta property="og:title" content="Lance Grimsley — Software / Product Engineer Portfolio" />
+<meta
+  property="og:description"
+  content="Full-stack portfolio centered on Deal Meal Planner, a grocery deal intelligence platform with FastAPI, SQLite, React, and Vite."
+/>
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/uploads/dealmeal-dashboard.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
-<link rel="stylesheet" href="portfolio.css" />
-
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="module" crossorigin src="/assets/index-BjzetHta.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Dtnwnz0i.css">
 </head>
 <body>
 <div id="root"></div>
-
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-<script type="text/babel" src="portfolio-mocks.jsx"></script>
-<script type="text/babel" src="portfolio-sections.jsx"></script>
-
-<script type="text/babel">
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "warmth": "bone",
-  "accent": "forest",
-  "density": "comfortable",
-  "dark": false,
-  "headline": "I build practical software for messy real-world systems."
-}/*EDITMODE-END*/;
-
-const ACCENTS = {
-  forest: { hue: 145, chroma: 0.07,  label: "Forest"   },
-  rust:   { hue:  40, chroma: 0.10,  label: "Rust"     },
-  ink:    { hue: 250, chroma: 0.08,  label: "Ink blue" },
-  ochre:  { hue:  80, chroma: 0.07,  label: "Ochre"    },
-};
-
-function App() {
-  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
-
-  // Apply accent via inline style on root
-  const a = ACCENTS[t.accent] || ACCENTS.forest;
-  const accentStyle = {
-    '--accent':       `oklch(${t.dark ? 0.78 : 0.46} ${a.chroma} ${a.hue})`,
-    '--accent-soft':  `oklch(${t.dark ? 0.78 : 0.46} ${a.chroma} ${a.hue} / ${t.dark ? 0.18 : 0.14})`,
-    '--accent-ink':   `oklch(${t.dark ? 0.88 : 0.32} ${a.chroma} ${a.hue})`,
-  };
-
-  const cls = [
-    `warmth-${t.warmth}`,
-    `density-${t.density}`,
-    t.dark ? 'dark' : 'light',
-  ].join(' ');
-
-  // Mirror theme classes onto <html> so body + nav (outside React root) react too
-  React.useEffect(() => {
-    const html = document.documentElement;
-    html.classList.remove('light', 'dark',
-      'warmth-bone', 'warmth-cream', 'warmth-offwhite',
-      'density-tight', 'density-comfortable', 'density-airy');
-    cls.split(' ').forEach(c => c && html.classList.add(c));
-    // Mirror accent vars too
-    Object.entries(accentStyle).forEach(([k, v]) => html.style.setProperty(k, v));
-  }, [cls, accentStyle['--accent']]);
-
-  return (
-    <div className={cls} style={accentStyle}>
-      <Nav />
-      <main className="app">
-        <Hero headline={t.headline} />
-        <FeaturedProject />
-        <Strengths />
-        <More />
-        <Story />
-        <Contact />
-      </main>
-
-    </div>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-</script>
 </body>
 </html>
